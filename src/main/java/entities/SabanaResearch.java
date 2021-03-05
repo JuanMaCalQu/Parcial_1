@@ -8,6 +8,7 @@ public class SabanaResearch {
     private List<Group> groups;
     private List<Summary> summaries;
 
+
     public SabanaResearch(List<Group> groups) {
         this.groups = groups;
         this.summaries = new ArrayList<>();
@@ -29,16 +30,17 @@ public class SabanaResearch {
      * @return The new Summary entry.
      */
     public void addSummary(Summary summary) {
-        this.summaries.add(date);
+        this.summaries.add(summary);
     }
 
     public int createSummaryEntry() {
-        Summary a = (Summary) SabanaResearch.this.summaries;
+
+        this.summaries= new ArrayList<>();
 
         int ap = 0;
-        for(Group g: this.groups)
-            ap +=  a.CountActiveProjects();
-        return ap;
+        for (Group g: this.groups)
+            ap += g.CountActiveProjects();
+
     }
 
 

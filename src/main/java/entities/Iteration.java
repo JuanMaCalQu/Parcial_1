@@ -3,6 +3,8 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.oracle.jrockit.jfr.FlightRecorder.isActive;
+
 public class Iteration {
 
     private String goal;
@@ -21,4 +23,7 @@ public class Iteration {
         this.activities.add(activity);
     }
 
+    public void countOpenActivities() {
+        isActive();
+    }
 }

@@ -1,9 +1,12 @@
 package entities;
 
+import jdk.management.resource.internal.inst.FileOutputStreamRMHooks;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
+
 
     private String name;
     private List<Project> projects;
@@ -17,4 +20,9 @@ public class Group {
         this.projects.add(plan);
     }
 
+    public int CountActiveProjects() {
+
+        for (Project p: this.projects)
+            p.isActive();
+    }
 }

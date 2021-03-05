@@ -16,7 +16,5 @@ public class Summary {
         return date;
     }
 
-    public int CountActiveProjects() {
-        return 0;
-    }
+
 }

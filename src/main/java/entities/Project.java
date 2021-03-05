@@ -1,6 +1,8 @@
 package entities;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,10 +39,21 @@ public class Project {
     /**
      * Evaluate if a project is active.
      *
+     * INVARIANBTES
+     *
+     * La hora final tiene que ser menor a la hora del sistema
+     *
      * @return false if the project has open activities or the dateEnd is before than the system date.
      */
     public boolean isActive() {
+        final LocalDateTime now = ZoneId;
+        if (this.dateEnd< now)
         return false;
+
+        for(Iteration i: this.iterations)
+            i.countOpenActivities();
+
+
     }
 
 
