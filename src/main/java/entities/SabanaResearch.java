@@ -14,6 +14,10 @@ public class SabanaResearch {
         this.summaries = new ArrayList<>();
     }
 
+    public SabanaResearch() {
+        this.summaries = new ArrayList<Summary>();
+    }
+
 
     public int countOfGroups() {
         return this.groups.size();
@@ -35,7 +39,7 @@ public class SabanaResearch {
 
     public int createSummaryEntry() {
 
-        this.summaries= new ArrayList<>();
+        new SabanaResearch();
 
         int ap = 0;
         for (Group g: this.groups)

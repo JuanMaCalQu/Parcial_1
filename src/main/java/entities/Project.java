@@ -11,6 +11,7 @@ public class Project {
     private String name;
     private LocalDate dateInit;
     private LocalDate dateEnd;
+    private LocalDate now;
     private Group group;
     private List<Iteration> iterations;
 
@@ -47,7 +48,9 @@ public class Project {
      */
     public boolean isActive() {
         final LocalDateTime now = ZoneId;
-        if (this.dateEnd< now)
+        if (this.dateEnd < this.now){
+            return false;
+        }
         return false;
 
         for(Iteration i: this.iterations)
