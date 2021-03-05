@@ -1,6 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +12,7 @@ public class SabanaResearch {
         this.groups = groups;
         this.summaries = new ArrayList<>();
     }
+
 
     public int countOfGroups() {
         return this.groups.size();
@@ -28,7 +28,19 @@ public class SabanaResearch {
      *
      * @return The new Summary entry.
      */
-    public Summary createSummaryEntry() {
-        return null;
+    public void addSummary(Summary summary) {
+        this.summaries.add(date);
     }
+
+    public int createSummaryEntry() {
+        Summary a = (Summary) SabanaResearch.this.summaries;
+
+        int ap = 0;
+        for(Group g: this.groups)
+            ap +=  a.CountActiveProjects();
+        return ap;
+    }
+
+
+
 }

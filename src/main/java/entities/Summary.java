@@ -15,4 +15,8 @@ public class Summary {
     public LocalDate getDate() {
         return date;
     }
+
+    public int CountActiveProjects() {
+        return 0;
+    }
 }
