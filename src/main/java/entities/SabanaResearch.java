@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SabanaResearch {
+    /**
+     * ATRIBUTOS DE LA CLASE
+     */
 
     private List<Group> groups;
     private List<Summary> summaries;

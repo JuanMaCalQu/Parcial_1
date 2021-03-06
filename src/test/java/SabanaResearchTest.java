@@ -12,7 +12,9 @@ import java.util.Random;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SabanaResearchTest {
-
+    /**
+     * ATRIBUTOS DE LA CLASE
+     */
     private SabanaResearch sabanaResearch;
     private List<Group> groups;
     private List<Project> projects;

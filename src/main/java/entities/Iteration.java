@@ -6,7 +6,9 @@ import java.util.List;
 import static com.oracle.jrockit.jfr.FlightRecorder.isActive;
 
 public class Iteration {
-
+    /**
+     * atributos de la clase
+     */
     private String goal;
     private Project project;
     private List<Activity> activities;

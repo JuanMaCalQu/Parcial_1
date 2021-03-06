@@ -3,6 +3,10 @@ package entities;
 import java.time.LocalDate;
 
 public class Activity {
+    /**
+     * atributos de la clase
+     *
+     */
 
     public static final String ACTIVE_STATE = "active";
     public static final String CLOSED_STATE = "closed";
@@ -13,6 +17,12 @@ public class Activity {
     private String state;
     private Iteration iteration;
 
+    /**
+     * Crea una nueva actividad con sus respectivas propiedades
+     * @param name
+     * @param state
+     * @param iteration
+     */
     public Activity(String name, String state, Iteration iteration) {
         this.name = name;
         this.state = state;

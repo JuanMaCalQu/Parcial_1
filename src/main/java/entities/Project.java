@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
-
+    /**
+     * ATRIBUTOS DE LA CLASE
+     */
     private String name;
     private LocalDate dateInit;
     private LocalDate dateEnd;
